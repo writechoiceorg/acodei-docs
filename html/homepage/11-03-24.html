@@ -48,12 +48,11 @@
       justify-content: center;
       padding-top: 50px;
       padding-bottom: 20px;
-      gap: 70px;
-      /* height: 80%; */
+      gap: 50px;
     }
 
     .header_container h1 {
-      margin: 30px 0 0 0;
+      margin: 15px 0 0 0;
       color: #252525;
       font-family: "Open Sans";
       font-size: 70px;
@@ -62,7 +61,7 @@
     }
 
     .header_container .hero_content p {
-      width: 547px;
+      width: 585px;
       margin-top: 27px;
       color: #252525;
       font-family: "Open Sans";
@@ -262,6 +261,13 @@
     /* *************************************************************** */
     /* ************************ MEDIA QUERIES ************************ */
     /* *************************************************************** */
+    @media only screen and (min-width: 1240px) and (max-width: 1640px) {
+      .cards_container .card {
+        /* width: 450px; */
+        flex-basis: calc(50% - 16px);
+      }
+    }
+
     @media only screen and (max-width: 1290px) {
       .header_container h1 {
         line-height: 80px;
@@ -276,8 +282,15 @@
     }
 
     @media only screen and (max-width: 1065px) {
-      .hero_container h1 {
+      .header_container h1 {
         font-size: 60px;
+      }
+    }
+
+    @media only screen and (max-width: 1015px) {
+      .header_container h1 {
+        font-size: 50px;
+        margin: 0;
       }
     }
 
@@ -285,11 +298,7 @@
       .cards_container .card {
         width: 350px;
       }
-    }
-
-    @media only screen and (max-width: 950px) {
       .hero .hero_content p {
-        font-size: 18px;
         width: fit-content;
       }
     }
@@ -304,14 +313,7 @@
       }
     }
 
-    @media only screen and (max-width: 837px) {
-      .header .hero_content p {
-        margin-bottom: 26px;
-        line-height: 28px;
-      }
-    }
-
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 865px) {
       .header_container .header_content {
         flex-direction: column;
         gap: 0;
@@ -321,8 +323,15 @@
 
       .header_container h1 {
         text-align: start;
-        font-size: 70px;
+        font-size: 60px;
         line-height: 70px;
+      }
+    }
+
+    @media only screen and (max-width: 837px) {
+      .header .hero_content p {
+        margin-bottom: 26px;
+        line-height: 28px;
       }
     }
 
@@ -353,23 +362,26 @@
     }
 
     @media only screen and (max-width: 595px) {
-      .hero_container h1 {
-        font-size: 35px;
+      .header_container h1 {
+        font-size: 50px;
       }
 
-      .hero_container p {
+      .header_container p {
         font-size: 15px !important;
         margin-bottom: 20px !important;
       }
     }
 
     @media only screen and (max-width: 550px) {
+      .header_container .header_content {
+        padding-top: 20px;
+      }
       .cards_container .card {
         width: 90%;
       }
 
       .header_container h1 {
-        font-size: 50px;
+        font-size: 40px;
         line-height: 50px;
       }
     }
@@ -387,6 +399,17 @@
         font-size: 15px;
       }
     }
+
+    @media only screen and (max-width: 300px) {
+      .header_container h1 {
+        font-size: 30px;
+        line-height: 40px;
+      }
+
+      .hero .hero_content p {
+        margin: 15px 0 !important;
+      }
+    }
   </style>
 </head>
 
@@ -397,7 +420,7 @@
         <h1>Learn how to use Acodei</h1>
         <div class="hero_content">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+            Explore our guides to transform your accounting into a seamless task and optimize your bookkeeping time by unifying Stripe and QuickBooks with Acodei.
           </p>
           <div class="btn_container">
             <a class="hero_btn" href="docs">Get Started</a>
@@ -409,42 +432,42 @@
 
   <div class="cards_container">
 
-    <div class="card card_with_link" onclick="window.location=''">
+    <div class="card card_with_link" onclick="window.location='docs/whats-acodei'">
       <div class="card_image image1">
       </div>
       <div class="card_text">
         <h3>Getting Started</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        <p>Begin your journey by effortlessly connecting Stripe with QuickBooks Online in just a few simple steps.</p>
       </div>
     </div>
 
     <div class="card card_with_link"
-      onclick="window.location=''">
+      onclick="window.location='docs/overview-basic-functionalities'">
       <div class="card_image image2">
       </div>
       <div class="card_text">
         <h3>Basic Functionalities</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        <p>Discover the fundamental features of Acodei and learn how to effectively utilize them.</p>
       </div>
     </div>
 
     <div class="card card_with_link"
-      onclick="window.location=''">
+      onclick="window.location='docs/overview-advanced-functionalities'">
       <div class="card_image image3">
       </div>
       <div class="card_text">
         <h3>Advanced Functionalities</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        <p>Explore Acodei further and unlock its advanced capabilities to streamline your workflow and enhance efficiency.</p>
       </div>
     </div>
 
     <div class="card card_with_link"
-      onclick="window.location=''">
+      onclick="window.location='docs/create-an-undeposited-funds-account'">
       <div class="card_image image4">
       </div>
       <div class="card_text">
         <h3>Troubleshooting</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        <p>Resolve common issues and challenges with the help of our troubleshooting guide, ensuring smooth operation of Acodei.</p>
       </div>
     </div>
 
